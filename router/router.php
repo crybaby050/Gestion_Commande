@@ -4,11 +4,11 @@ $controllers=[
     "commande"=>"commande",
     "produit"=>"produit",
     //"dashboard"=>"dashboard",
-    //"auth"=>"auth"
+    "auth"=>"auth"
 
 ];
 
- $controller=$_REQUEST["controller"]??"client";
+ $controller=$_REQUEST["controller"]??"auth";
  
  if (array_key_exists($controller, $controllers)) {
      $path=ROOT."/controller/".$controllers[$controller]."Controller.php";
